@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profession Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 280px;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Profession Picker</h2>
+        <button onclick="pickRandom()">Pick Random</button>
+        <div id="result"></div>
+    </div>
+<script>
+    const professions = [
+        "Doctor", "Nurse", "Teacher", "Engineer", "Architect", "Lawyer", "Chef", "Police Officer", "Firefighter", "Artist",
+        "Musician", "Writer", "Actor", "Dentist", "Pharmacist", "Veterinarian", "Pilot", "Flight Attendant", "Scientist", "Biologist",
+        "Psychologist", "Plumber", "Electrician", "Mechanic", "Carpenter", "Designer", "Web Developer", "Software Engineer", "Data Analyst", "Journalist",
+        "Photographer", "Farmer", "Social Worker", "Translator", "Interpreter", "Librarian", "Cashier", "Salesperson", "Hairdresser", "Makeup Artist",
+        "Animator", "Economist", "Recruiter", "Accountant", "Banker", "Real Estate Agent", "Physiotherapist", "Personal Trainer", "Chef Assistant", "Geologist"
+    ];
+
+    function pickRandom() {
+        const random = professions[Math.floor(Math.random() * professions.length)];
+        document.getElementById('result').textContent = `${random}`;
+    }
+</script>
+</body>
+</html>
